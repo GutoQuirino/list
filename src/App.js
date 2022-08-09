@@ -17,11 +17,13 @@ function App() {
 
   }, [])
 
+  
+
   return (
     <div className="App">
       <h1>LISTA DE TAREFAS</h1>
-      <Imput className='inputs'/>
-      <Botao/>
+      <Imput />
+      <Botao />
       <hr/>
       {lista.map((c)=>{
         return (

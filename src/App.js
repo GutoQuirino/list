@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Imput from './components/input'
+import Botao from './components/Botao'
+import { useState} from 'react'
+import { useEffect } from 'react';
 
 function App() {
+
+  const [lista,setLista]= useState([])
+
+  useEffect(()=>{
+
+    setLista([{tarefa:'Comprar pao'},
+              {tarefa:'Limpar a casa'},
+              {tarefa:'Lavar o banheiro'}
+  ])
+
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>LISTA DE TAREFAS</h1>
+      <Imput className='inputs'/>
+      <Botao/>
+      <hr/>
+      {lista.map((c)=>{
+        return (
+          <ul>
+            <li>{c.tarefa}</li>
+          </ul>
+        )
+      })}
     </div>
   );
 }

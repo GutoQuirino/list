@@ -8,29 +8,3 @@
   flex-direction: column;
 }
 
-input{
-  width: 80%;
-  margin: 15px auto;
-  height: 30px;
-  font-size: 20px;
-  border: none;
-}
-
-button{
-  width: 80%;
-  margin: 15px auto;
-  height: 35px;
-  font-size: 20px;
-  border-radius: 8px;
-  border: none;
-  background-color: #3636fd;
-  color: #fff;
-  box-shadow: 2px 2px #000;
-}
-h1{
-  text-align: center;
-}
-ul{
-  margin-left: 5%;
-}
-
